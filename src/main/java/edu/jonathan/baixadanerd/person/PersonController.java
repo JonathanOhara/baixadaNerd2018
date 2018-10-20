@@ -1,6 +1,7 @@
 package edu.jonathan.baixadanerd.person;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -25,7 +26,7 @@ public class PersonController {
     }
 
     @POST
-    public Person insertPerson(Person person){
+    public Person insertPerson(@Valid Person person){
         return personService.insertPerson(person);
     }
 
